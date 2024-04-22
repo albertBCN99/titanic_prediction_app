@@ -51,7 +51,7 @@ input_df = user_input_features()
 
 # Combines user input features with entire penguins dataset
 # This will be useful for the encoding phase
-titanic_raw = pd.read_excel(r"C:\Users\alber\Desktop\CLASES\01_Streamlit\13_Titanic\titanic_streamlit.xlsx")
+titanic_raw = pd.read_excel(r"titanic_streamlit.xlsx")
 titanic = titanic_raw.drop(columns=['survived'])
 df = pd.concat([input_df,titanic],axis=0)
 
@@ -68,7 +68,7 @@ print(type(df))
 
 
 # Reads in saved classification model
-load_clf = pickle.load(open(r"C:\Users\alber\Desktop\CLASES\01_Streamlit\13_Titanic\titanic_clf_2.pkl", 'rb'))
+load_clf = pickle.load(open(r"titanic_clf_2.pkl", 'rb'))
 
 # Apply the model to make predictions on the user input data
 prediction = load_clf.predict(df)
