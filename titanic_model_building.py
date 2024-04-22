@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-titanic = pd.read_excel(r"C:\Users\alber\Desktop\CLASES\01_Streamlit\13_Titanic\titanic_streamlit.xlsx")
+titanic = pd.read_excel(r"titanic_streamlit.xlsx")
 df = titanic.copy()
 
 target = 'survived'
@@ -23,4 +23,4 @@ clf.fit(X, Y)
 
 # Saving the model
 import pickle
-pickle.dump(clf, open(r'C:\Users\alber\Desktop\CLASES\01_Streamlit\13_Titanic\titanic_clf_2.pkl', 'wb'))
+pickle.dump(clf, open(r'titanic_clf_2.pkl', 'wb'))
