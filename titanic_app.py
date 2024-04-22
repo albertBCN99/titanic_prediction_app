@@ -11,7 +11,7 @@ from PIL import Image
 # Colocar la imagen en la parte superior
 # Display the Titanic image
 
-image = Image.open(r"C:\Users\alber\Desktop\CLASES\01_Streamlit\13_Titanic\titanic.png")
+image = Image.open(r"titanic.png")
 new_image = image.resize((600,150))
 
 st.image(new_image)
